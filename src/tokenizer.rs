@@ -62,10 +62,14 @@ impl Tokenizer {
                     } else if "+-*/^".contains(c) {
                         let binop = self.get_binop();
                         self.new_binop_token(binop)?;
+                    } else {
+                        return Err(Error::Unknown);
                     }
                 }
 
-                Err(_) => {}
+                Err(e) => {
+                    return Err(e);
+                }
             }
         }
 
