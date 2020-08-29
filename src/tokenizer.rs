@@ -1,6 +1,6 @@
 use crate::token;
+use crate::token::Tokens;
 
-type Tokens = Vec<token::Token>;
 type Result<T> = std::result::Result<T, Error>;
 
 #[derive(Debug)]

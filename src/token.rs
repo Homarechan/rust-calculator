@@ -15,3 +15,5 @@ pub enum BinOp {
     Div,   // /
     Pow,   // **
 }
+
+pub type Tokens = Vec<Token>;
