@@ -33,7 +33,6 @@ impl Tokenizer {
     pub fn tokenize(&mut self) -> Result<()> {
         while self.cursor < self.expression.len() {
             let now = self.get_now();
-            dbg!(&now);
 
             match now {
                 Ok(' ') => {
@@ -117,7 +116,6 @@ impl Tokenizer {
         loop {
             match self.get_now() {
                 Ok(c) => {
-                    dbg!(c);
                     if "1234567890".contains(c) {
                         str_num.push(c);
                         self.next_char();
@@ -128,8 +126,6 @@ impl Tokenizer {
                 Err(_) => return Err(Error::OutOfBound),
             }
         }
-
-        dbg!(&str_num);
 
         return str_num.parse::<i64>().or(Err(Error::Unreachable));
     }
