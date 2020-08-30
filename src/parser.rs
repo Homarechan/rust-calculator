@@ -81,7 +81,7 @@ impl Parser {
 
         match self.take_now() {
             Some(&token) => match token {
-                Token::BinOp(BinOp::Mul) | Token::BinOp(BinOp::Div) => {
+                Token::BinOp(BinOp::Mul) | Token::BinOp(BinOp::Div) | Token::BinOp(BinOp::Pow) => {
                     self.next_token();
                     lhs = tree::Tree::new(
                         match token {
