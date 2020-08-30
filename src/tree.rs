@@ -4,6 +4,7 @@ pub enum Node {
     Minus,
     Mul,
     Div,
+    Pow,
     Num(i64),
     Head, // leading temporary element
 }

@@ -88,6 +88,7 @@ impl Parser {
                         match token {
                             Token::BinOp(BinOp::Mul) => tree::Node::Mul,
                             Token::BinOp(BinOp::Div) => tree::Node::Div,
+                            Token::BinOp(BinOp::Pow) => tree::Node::Pow,
                             _ => unreachable!(),
                         },
                         Some(Box::new(lhs)),
