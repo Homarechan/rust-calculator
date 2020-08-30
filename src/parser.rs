@@ -42,7 +42,6 @@ impl Parser {
 
 impl Parser {
     fn take_now(&self) -> Option<&token::Token> {
-        dbg!(self.tokens.get(self.cursor));
         self.tokens.get(self.cursor)
     }
 
