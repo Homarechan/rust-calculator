@@ -96,10 +96,6 @@ impl Tokenizer {
         self.cursor += 1;
     }
 
-    fn prev_char(&mut self) {
-        self.cursor -= 1;
-    }
-
     fn get_now_and_next(&mut self) -> Result<char> {
         self.next_char();
         match self.expression.chars().nth(self.cursor - 1) {
