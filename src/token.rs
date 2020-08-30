@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum Token {
     Number(i64),
     BinOp(BinOp),
@@ -7,7 +7,7 @@ pub enum Token {
     EOF,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum BinOp {
     Plus,  // +
     Minus, // -
