@@ -10,11 +10,11 @@ pub enum Node {
 
 #[derive(Debug)]
 pub struct Tree {
-    node: Node,
+    pub node: Node,
 
     // None if it is the end of a bipartite tree
-    lhs: Option<Box<Tree>>,
-    rhs: Option<Box<Tree>>,
+    pub lhs: Option<Box<Tree>>,
+    pub rhs: Option<Box<Tree>>,
 }
 
 impl Tree {
