@@ -108,6 +108,7 @@ impl Parser {
 
         match self.take_now() {
             Some(token::Token::LeftPar) => {
+                self.next_token();
                 let node = self.expr()?;
                 if let Some(token::Token::RightPar) = self.take_now() {
                     ret = Ok(node);

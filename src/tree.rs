@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum Node {
     Plus,
     Minus,
@@ -9,7 +9,7 @@ pub enum Node {
     Head, // leading temporary element
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Tree {
     pub node: Node,
 
